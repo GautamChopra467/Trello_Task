@@ -1,3 +1,57 @@
+Questions :
+How would your tables and apis change for the following scenarios. What tables and api endpoints would you add? Which tables and api endpoints would need to be updated?
+
+1.	If a user can create and edit stages for a particular board. For example instead of Open > In Progress > Done if they want the stages of their task board to be Read > Working > Reviewing > Completed
+Answer: I can probably implement an option of add stage where the user can create a new stage with stage name.
+
+Stage: {
+	stage_name: “”,
+  stage_id: “”,
+  tasks: [task_id1, task_id2, ………]
+}
+
+Board: {
+  Board_id: “”,
+  Board_name: “”,
+  stages: [stage_id1, stag_id2, …..]
+}
+
+Endpoint: POST /api/boards/{board_id}/stages
+	        GET /api/boards/{board_id}/tasks
+
+
+2.	If users can comment on tasks
+
+Answer:
+
+I would create a new table/document for comment
+
+comment: {  
+	comment_id: “”,	    // unique id for every comment
+	from: “”,                            // person who has commented
+	task_id: “”,                      // task on which user has commented
+	description: “”		 //  comment details
+}
+
+Also in task table/document I would add a new field 
+
+comments:  [comment_id1, comment_id2, …….]
+
+storing all the comment id’s on the particular task.
+
+
+3.	How will you do error handling?
+
+Answer: 
+1.	Error Responses: I can use error response messages to tell the user if wrong values have been filled.
+2.	Validation: On client side as well as server side I can perform form validation so that any incorrect detail should not be filled in the DB.
+3.	Authentication and Authorization: I can authenticate the user so that a valid user can update his her credentials.
+4.	Logging: I can implement logging to capture errors on the server-side and also be used for debugging.
+   
+By following these implementations, we can create a robust application with proper error handling and maintain data integrity.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
