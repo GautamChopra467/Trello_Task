@@ -4,11 +4,12 @@ import Navbar from "../../shared/widgets/Navbar/Navbar";
 import Stage from "../Stage/Stage";
 import { DragDropContext } from "react-beautiful-dnd";
 
-// Extracting the task data locally stored 
+// Extracting the tasks-data locally stored at services folder
 import { tasksInitialData } from "../../shared/services/tasksData"; 
 
 const Home = () => {
 
+  // state used for storing the data of all the tasks
   const [data, setData] = useState(tasksInitialData);
 
   const reorderColumnList = (sourceCol, sourceIndex, destinationIndex) => {
@@ -76,6 +77,7 @@ const Home = () => {
       taskIds: destinationTaskIds,
     }
 
+    // creating the new data object
     const newData = {
       ...data,
       columns: {
@@ -85,6 +87,7 @@ const Home = () => {
       }
     }
 
+    // updating the old data
     setData(newData);
     return;
   }

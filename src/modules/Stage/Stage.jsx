@@ -6,8 +6,10 @@ import { AiOutlineClockCircle, AiOutlinePaperClip } from "react-icons/ai"
 
 const Stage = ({ column, tasks, data, setData }) => {
 
+  // state for toggling modal
   const [isModal, setIsModal] = useState(false);
 
+  // state for storing the data required when creating a new task
   const [formData, setFormData] = useState({
     id: "",
     content: "",
@@ -17,11 +19,14 @@ const Stage = ({ column, tasks, data, setData }) => {
     sharedCount: ""
   });
 
+  // handling the form inputs
   const handleForm = (e) => {
     const {name, value} = e.target;
     
     const tasks = data.tasks;
+    // extracting the the last task id 
     const oldId = Object.keys(tasks).pop();
+    // adding at the new task id
     const newId = Number(oldId) + 1;
 
     setFormData({
@@ -31,10 +36,11 @@ const Stage = ({ column, tasks, data, setData }) => {
     })
   }
 
+  // submitting the form
   const submitForm = (e) => {
     e.preventDefault();
-    setIsModal(!isModal);
-    addACard(column.id);
+    setIsModal(!isModal);     // closing the modal
+    addACard(column.id);      // adding a new card/task
   }
 
   const addCard = (columnId) => {
@@ -44,16 +50,20 @@ const Stage = ({ column, tasks, data, setData }) => {
   const addACard = (columnId) => {
     const newId = formData.id;
 
+    // creating the new task
     const taskIds = Array.from(data.columns[columnId].taskIds);
     taskIds.push(newId);
   
+    // adding the new task in the respective column
     const newCol = {
       ...data.columns[columnId],
       taskIds,
     }
+
     console.log("New Col",newCol)
     console.log("Form Data", formData)
 
+    // creating the updated data object
     const newData = {
       ...data,
       tasks: {
@@ -144,7 +154,7 @@ const Stage = ({ column, tasks, data, setData }) => {
          </button>
       </div>
 
-
+      {/* Task Modal */}
 
       {isModal && (
           <div className='modal_backgound_stage'>
