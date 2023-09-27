@@ -1,0 +1,17 @@
+.full_container_home {
+    width: 100%;
+    background: rgb(0,111,167);
+    background: linear-gradient(rgba(0,111,167,1) 0%, rgba(0,197,231,1) 64%);
+}
+
+.main_container_home {
+    width: 100%;
+    /* height: 100vh; */
+    padding: 10px 15px;
+}
+
+.main_box_home {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 15px;
+}

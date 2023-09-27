@@ -1,0 +1,53 @@
+.main_container_navbar {
+    width: 100%;
+    padding: 10px 25px;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.left_section_navbar {
+    display: flex;
+    align-items: center;
+
+    grid-gap: 8px;
+}
+
+.left_section_navbar h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.star_navbar {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.left_section_navbar h3 {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.left_section_navbar p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.users_navbar {
+    font-size: 16px;
+}
+
+.right_section_navbar {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.right_section_navbar a {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}

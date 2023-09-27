@@ -1,0 +1,228 @@
+.main_container_stage {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    background-color: #e3e4e6;
+    overflow: hidden;
+    padding: 12px 8px;
+}
+
+.top_section_stage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+}
+
+.top_section_stage h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #292828;
+}
+
+.dots_stage {
+    color: #b4b4b6;
+}
+
+.middle_section_stage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    padding: 10px 0;
+}
+
+.task_container_stage {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.task_top_section_stage {
+    width: 100%;
+}
+
+.task_top_section_stage img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.task_image_box_stage {
+    width: 100%;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.progress_bar_stage {
+    width: 25%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #fea92a;
+}
+
+.task_middle_section_stage {
+    width: 100%;
+    padding: 6px 8px;
+}
+
+.task_middle_section_stage p {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #2c2b2b;
+}
+
+.task_bottom_section_stage {
+    width: 100%;
+    padding: 0px 8px 5px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task_bottom_left_section_stage {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    color: #787879;
+}
+
+.task_bottom_left_section_stage p, .task_bottom_left_section_stage h2 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.task_bottom_right_section_stage {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task_bottom_right_section_stage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom_section_stage {
+    padding: 6px 2px 0 2px;
+    display: flex;
+    align-items: center;
+}
+
+.add_card_btn_stage {
+    padding: 4px 8px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #35c339;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.add_card_btn_stage:hover {
+    background-color: #2ba72f;
+}
+
+
+
+.modal_backgound_stage {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 39, 46, 0.95);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    /* overflow: auto; */
+  }
+  
+  .modal_container_stage {
+      /* height: 100%; */
+    background-color: #fff;
+    padding: 32px;
+    border: 1px solid #787879;
+    width: 727px;
+    min-width: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 25px;
+    overflow-y: scroll;
+  }
+  
+  .modal_top_section_stage h2 {
+    color: #fff;
+  }
+  
+  .modal_mid_section_stage form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 25px;
+  }
+  
+  .form_box_stage {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 7px;
+  }
+  
+  .form_box_stage label {
+    font-weight: 700;
+    color: #222;
+    font-size: 1rem;
+    margin-left: 2px;
+  }
+  
+  .form_box_stage input {
+    outline: none;
+    padding: 12px 10px;
+    width: 100%;
+    border: 1px solid #787879;
+    color: #222;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 3px 0;
+    transition: 0.1s;
+    background-color: #fff;
+  }
+  
+  .modal_bottom_section_stage {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .btn_primary_stage {
+    min-width: 90px;
+    background-color: #35c339;
+    color: #fff;
+    padding: 9px 14px;
+    border-radius: 0.313rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  
+  .btn_primary_education:hover {
+    background-color: #2ba72f;
+  }
